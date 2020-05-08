@@ -2,23 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15441" started-at="2020-05-08T14:48:13Z" finished-at="2020-05-08T14:48:29Z">
+  <suite name="Default suite" duration-ms="15820" started-at="2020-05-08T19:54:46Z" finished-at="2020-05-08T19:55:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15441" started-at="2020-05-08T14:48:13Z" finished-at="2020-05-08T14:48:29Z">
+    <test name="Default test" duration-ms="15820" started-at="2020-05-08T19:54:46Z" finished-at="2020-05-08T19:55:02Z">
       <class name="com.training.sanity.tests.LoginTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="setUpBeforeClass" is-config="true" duration-ms="7415" started-at="2020-05-08T10:48:13Z" finished-at="2020-05-08T10:48:21Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@51565ec2]" name="setUpBeforeClass" is-config="true" duration-ms="8617" started-at="2020-05-08T15:54:46Z" finished-at="2020-05-08T15:54:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="validLoginTest" duration-ms="2289" started-at="2020-05-08T10:48:21Z" finished-at="2020-05-08T10:48:23Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:2, instance:com.training.sanity.tests.LoginTests@51565ec2]" name="validLoginTest" duration-ms="7174" started-at="2020-05-08T15:54:55Z" finished-at="2020-05-08T15:55:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="tearDown" is-config="true" duration-ms="5720" started-at="2020-05-08T10:48:23Z" finished-at="2020-05-08T10:48:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
       </class> <!-- com.training.sanity.tests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

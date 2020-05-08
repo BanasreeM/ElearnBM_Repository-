@@ -46,67 +46,51 @@ public class LoginTests {
 		// open the browser 
 		driver.get(baseUrl); 
 	} */
-	//gjfkjgfj
 	
-   @AfterMethod
+	
+  /* @AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(5000);
 		driver.quit(); 
-	} 
+	} */
 	
 
 	/* ELTC_001 TO verify whether application allows user to get registered as Student */
-	@Test(priority=1, enabled=true)
+	@Test(priority=1, enabled=false)
 	public void StudentRegister() { 
 		
 		loginPOM.StudentSignUpLinkClick();
-		loginPOM.REnterFirstName("AA");
-		loginPOM.REnterLastName("ZZ");
-		loginPOM.REnterEmail("AAZZ@gmail.com");
-		loginPOM.REnterUserName("AAZZ1");
-		loginPOM.RPassword("AAzz@123");
-		loginPOM.RconfirmPassword("AAzz@123");
-		loginPOM.RPhone("123999998");
+		loginPOM.REnterFirstName("AaA");
+		loginPOM.REnterLastName("ZzZ");
+		loginPOM.REnterEmail("AAazZZ@gmail.com");
+		loginPOM.REnterUserName("AAZZ2");
+		loginPOM.RPassword("AAzz@222");
+		loginPOM.RconfirmPassword("AAzz@222");
+		loginPOM.RPhone("123999997");
 		//loginPOM.RLanguage("English");
-		loginPOM.RCode("125");
-		loginPOM.RskypeID("125");
-		loginPOM.RLinkedInURL("AAZZ");
+		loginPOM.RCode("222");
+		loginPOM.RskypeID("2222");
+		loginPOM.RLinkedInURL("AAazZZ");
 		loginPOM.clickRegisterBtn(); 
-		//LoginPOM.rBtn();
+		//LoginPOM.HomePageLinkClick();
 		
 		screenShot.captureScreenShot("First");
-	
 	}
-	
-	
 	
 	/*ELTC_002 To verify whether application allows student to get logged in by entering valid credentials*/
-	@Test(priority=2, enabled =false)
+	/*ELTC_003 To verify whether application allows user to change the password in Edit Profile page*/
+	@Test(priority=2, enabled =true)
 	public void validLoginTest() {
 		loginPOM.sendUserName("ABA1");
-		loginPOM.sendPassword("ABAbba@123");
+		loginPOM.sendPassword("ABAbba@333");
 		loginPOM.clickLoginBtn(); 
+		loginPOM.EditProfileLinkClick();
+		loginPOM.OldPassword("ABAbba@123");
+		loginPOM.NewPassword("ABAbba@333");
+		loginPOM.NewconfirmPassword("ABAbba@111");
+		loginPOM.SaveSettingBtnClick();
 		screenShot.captureScreenShot("First");
-	
 	}
-	
-	
-	
-	/*ELTC_003 To verify whether application allows user to change the password in Edit Profile page*/
-	
-/*	@Test(priority=3)
-	public void pwdreset(){
-		loginPOM.sendUserName("ABA1");
-		loginPOM.sendPassword("ABAbba@1");
-		loginPOM.clickLoginBtn(); 
-		//loginPOM.changepwd();
-		loginPOM.newPwd("ABAbba@123");
-		loginPOM.pwdConfirm("ABAbba@123");
-		loginPOM.submit();
-		loginPOM.pwdSuccessMsg();
-		screenShot.captureScreenShot("First");
 		
-	} */
-	
 }
 

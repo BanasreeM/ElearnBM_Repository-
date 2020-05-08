@@ -13,32 +13,6 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	   
-	//*********Login with Valid user ID and PASSWORD *******//
-	
-	@FindBy(id="login")
-	private WebElement userName; 
-	
-	@FindBy(id="password")
-	private WebElement password;
-	
-	@FindBy(id="form-login_submitAuth") // updated exact locator
-	private WebElement loginBtn;
-	
-	
-	//****** Password Reset***//
-	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
-	}
-	
-	public void sendPassword(String password) {
-		this.password.clear(); 
-		this.password.sendKeys(password); 
-	}
-	
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
-	}
 	
 	//********************************SignUp Student***********************************************************//
 	
@@ -144,44 +118,78 @@ public class LoginPOM {
 		this.rBtn.click();
 		
 	}
+	
+	//*********Login with Valid user ID and PASSWORD *******//
+	
+		@FindBy(id="login")
+		private WebElement userName; 
+		
+		@FindBy(id="password")
+		private WebElement password;
+		
+		@FindBy(id="form-login_submitAuth") // updated exact locator
+		private WebElement loginBtn;
+		
+		  public void sendUserName(String userName) {
+				this.userName.clear();
+				this.userName.sendKeys(userName);
+			}
+
+			public void sendPassword(String password) {
+				this.password.clear(); 
+				this.password.sendKeys(password); 
+			}
+
+			public void clickLoginBtn() {
+				this.loginBtn.click(); 
+			} 
+	
+	//**************************************Click on Edit Profile after student Login *****************************************
+     @FindBy(xpath="//a[@href=\'http://elearning.upskills.in/main/auth/profile.php']") 
+    private WebElement editProfile;
+    
+     public void EditProfileLinkClick() {
+ 		this.editProfile.click();
+ 		
+ 	} 
+   /* @FindBy(xpath="//a[@href=\'http://elearning.upskills.in/main/auth/profile.php']") //for homepage link
+     private WebElement editProfil; */
+     
+   //****** Password Edit ***//
+     
+     @FindBy(id="profile_password0")
+		private WebElement oPassword;
+     
+     @FindBy(id="password1")
+  		private WebElement nPassword;
+     
+     @FindBy(id="profile_password2")
+  		private WebElement nConfirmPassword;
+     
+     
+     public void OldPassword(String oPassword) {
+  		this.oPassword.clear();
+  		this.oPassword.sendKeys(oPassword);
+     }
+  		
+     public void NewPassword(String nPassword) {
+ 		this.nPassword.clear();
+ 		this.nPassword.sendKeys(nPassword);
+ 	}
+ 	public void NewconfirmPassword(String nConfirmPassword) {
+ 		this.nConfirmPassword.clear();
+ 		this.nConfirmPassword.sendKeys(nConfirmPassword);
+     
+ 	}
+  
+     @FindBy(id="profile_apply_change") // CLICK SAVE Setting button
+		private WebElement saveSettingsBtn;
+     
+    public void SaveSettingBtnClick() {
+  	this.saveSettingsBtn.click(); 
+  		} 	
+
+
 
 	
-//****************************************************************************************
-/* Change Password*/
-	
-	
-
-	public void pwdConfirm(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void submit() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void pwdSuccessMsg() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void changepwd() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void newPwd(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-		
-	}
-
-	
-		
-
-	
-	
-
+}

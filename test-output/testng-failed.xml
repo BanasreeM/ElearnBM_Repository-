@@ -5,9 +5,8 @@
     <classes>
       <class name="com.training.sanity.tests.LoginTests">
         <methods>
-          <include name="StudentRegister"/>
           <include name="setUpBeforeClass"/>
-          <include name="tearDown"/>
+          <include name="validLoginTest"/>
         </methods>
       </class> <!-- com.training.sanity.tests.LoginTests -->
     </classes>
