@@ -12,7 +12,7 @@ public class LoginPOM {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	
+	   
 	//*********Login with Valid user ID and PASSWORD *******//
 	
 	@FindBy(id="login")
@@ -24,10 +24,8 @@ public class LoginPOM {
 	@FindBy(id="form-login_submitAuth") // updated exact locator
 	private WebElement loginBtn;
 	
-	//****** Password Reset***//
-     
-
 	
+	//****** Password Reset***//
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -42,16 +40,12 @@ public class LoginPOM {
 		this.loginBtn.click(); 
 	}
 	
-	// ****************************** FindSignup Button and click on it  ************************************************//
-	// driver.findElement(By.linkText("Sign up!")).click();
-	//// driver.findElement(By.xpath("//")).click();
-    @findBy(xpath="//")   
-	
-	//******************************************************************************************************************
 	//********************************SignUp Student***********************************************************//
 	
-	//Dummy code added
 	
+	 @FindBy(xpath="//a[@href=\'http://elearning.upskills.in/main/auth/inscription.php']") 
+     private WebElement rsignup;
+    
 	@FindBy(id="registration_firstname")
 	private WebElement rEnterFirstName;
 	
@@ -65,7 +59,7 @@ public class LoginPOM {
 	private WebElement rEnteruserName; 
 	
 	@FindBy(id="pass1")
-	private WebElement rNewPassword;
+	private WebElement rPassword;
 	
 	@FindBy(id="pass2")
 	private WebElement rConfirmPassword;
@@ -88,9 +82,8 @@ public class LoginPOM {
 	//@FindBy(id="registration_submit")  /for signup button
 	//private WebElement rBtn;
 	
-	
-	
 	public void StudentSignUpLinkClick() {
+		this.rsignup.click();
 		
 	}
 
@@ -115,8 +108,11 @@ public class LoginPOM {
 		this.rEnteruserName.sendKeys(rEnteruserName); // we need to enter test data here ?
 		
 	}
-
-	public void confirmPassword(String rConfirmPassword) {
+	public void RPassword(String rPassword) {
+		this.rPassword.clear();
+		this.rPassword.sendKeys(rPassword);
+	}
+	public void RconfirmPassword(String rConfirmPassword) {
 		this.rConfirmPassword.clear();
 		this.rConfirmPassword.sendKeys(rConfirmPassword);
 	}
@@ -145,7 +141,7 @@ public class LoginPOM {
 	}
 
 	public void clickRegisterBtn() {
-		//this.rBtn.click();
+		this.rBtn.click();
 		
 	}
 

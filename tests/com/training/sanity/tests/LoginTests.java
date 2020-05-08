@@ -34,40 +34,43 @@ public class LoginTests {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
+		//screenShot.captureScreenshot("Login Page");
 	}
 
-	@BeforeMethod
+	/*@BeforeMethod
 	public void setUp() throws Exception {
-	/*	driver = DriverFactory.getDriver(DriverNames.CHROME);
+	driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver);  // its invoking page object model file
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
-		driver.get(baseUrl); */
-	}
-	
-/*	@AfterMethod
-	public void tearDown() throws Exception {
-		Thread.sleep(1000);
-		driver.quit(); 
+		driver.get(baseUrl); 
 	} */
+	//gjfkjgfj
 	
+   @AfterMethod
+	public void tearDown() throws Exception {
+		Thread.sleep(5000);
+		driver.quit(); 
+	} 
+	
+
 	/* ELTC_001 TO verify whether application allows user to get registered as Student */
 	@Test(priority=1, enabled=true)
 	public void StudentRegister() { 
 		
 		loginPOM.StudentSignUpLinkClick();
-		loginPOM.REnterFirstName("A");
-		loginPOM.REnterLastName("Z");
-		loginPOM.REnterEmail("AZ@gmail.com");
-		loginPOM.REnterUserName("AZ1");
-		loginPOM.sendPassword("Az@123");
-		loginPOM.confirmPassword("Az@123");
-		loginPOM.RPhone("123999999");
+		loginPOM.REnterFirstName("AA");
+		loginPOM.REnterLastName("ZZ");
+		loginPOM.REnterEmail("AAZZ@gmail.com");
+		loginPOM.REnterUserName("AAZZ1");
+		loginPOM.RPassword("AAzz@123");
+		loginPOM.RconfirmPassword("AAzz@123");
+		loginPOM.RPhone("123999998");
 		//loginPOM.RLanguage("English");
-		loginPOM.RCode("123");
-		loginPOM.RskypeID("123");
-		loginPOM.RLinkedInURL("AAAA");
+		loginPOM.RCode("125");
+		loginPOM.RskypeID("125");
+		loginPOM.RLinkedInURL("AAZZ");
 		loginPOM.clickRegisterBtn(); 
 		//LoginPOM.rBtn();
 		
@@ -78,13 +81,15 @@ public class LoginTests {
 	
 	
 	/*ELTC_002 To verify whether application allows student to get logged in by entering valid credentials*/
-	@Test(priority=2)
+	@Test(priority=2, enabled =false)
 	public void validLoginTest() {
 		loginPOM.sendUserName("ABA1");
 		loginPOM.sendPassword("ABAbba@123");
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");
+	
 	}
+	
 	
 	
 	/*ELTC_003 To verify whether application allows user to change the password in Edit Profile page*/
