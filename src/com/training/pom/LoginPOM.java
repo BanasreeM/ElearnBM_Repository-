@@ -43,13 +43,14 @@ public class LoginPOM {
 	}
 	
 	// ****************************** FindSignup Button and click on it  ************************************************//
-	 driver.findElement(By.linkText("Sign up!")).click();
-       
+	// driver.findElement(By.linkText("Sign up!")).click();
+	//// driver.findElement(By.xpath("//")).click();
+    @findBy(xpath="//")   
 	
 	//******************************************************************************************************************
 	//********************************SignUp Student***********************************************************//
 	
-	
+	//Dummy code added
 	
 	@FindBy(id="registration_firstname")
 	private WebElement rEnterFirstName;
