@@ -6,7 +6,7 @@
       <class name="com.training.sanity.tests.LoginTests">
         <methods>
           <include name="setUpBeforeClass"/>
-          <include name="validLoginTest"/>
+          <include name="techReviewAssignment"/>
         </methods>
       </class> <!-- com.training.sanity.tests.LoginTests -->
     </classes>
